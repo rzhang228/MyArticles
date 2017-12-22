@@ -1,4 +1,5 @@
 # 观Turbo后感
+
 > * 原文地址：[Introducing Turbo: 5x faster than Yarn & NPM, and runs natively in-browser 🔥](https://medium.com/@ericsimons/introducing-turbo-5x-faster-than-yarn-npm-and-runs-natively-in-browser-cc2c39715403)
 > * 原文作者：[Eric Simons](https://medium.com/@ericsimons?source=post_header_lockup)
 > * 译文地址：[介绍 Turbo：比 Yarn 和 NPM 快 5 倍，可以在本地浏览器中运行](https://juejin.im/post/5a35d58ef265da431a434441?utm_source=gold_browser_extension)
@@ -22,7 +23,7 @@
 
 同时 **Turbo** 还提供了缓存机制。如果你需要的包已经存在于他的缓存中，则他会从jsDelivr提供的CDN中下载需要的文件。这种机制无疑再一次的提高了下载速度。
 
-非常可惜的是，由于 **Turbo** 仅仅是针对stackblitz（一个在线IDE）开发的，故此无法在本地使用。其实想想也可以理解，如果不是在线IDE，也不会对压缩 `node_modules` 有这么强的需求，对于本地开发来说， `node_modules` 过大，好像也不会影响到什么😜。
+非常可惜的是，由于 **Turbo** 仅仅是针对 *stackblitz*（一个在线IDE）开发的，故此无法在本地使用。其实想想也可以理解，如果不是在线IDE，也不会对压缩 `node_modules` 有这么强的需求，对于本地开发来说， `node_modules` 过大，好像也不会影响到什么😜。
 
 不过值得一提的是，文中提到了一种很实用的想法：
 > 使用 Turbo 使脚本类型与模块相等
