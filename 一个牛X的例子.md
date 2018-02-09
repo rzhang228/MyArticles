@@ -101,7 +101,7 @@ setImmediate(() => {
 
 `immediate`永远得不到输出，event loop会被永远的堵塞在`tick`函数执行的时候event loop所处的阶段，然后无限输出`n`，并且不会出现`Maximum call stack size exceeded`，因为每次都是执行完一个tick中的匿名函数再执行新的，不会出现溢出。
 
-关于网上常说的`宏任务`、`微任务`的概念，个人任务这个概念仅仅只是对`promise`、`setTimeout`、`setImmediate`、`process.nextTick()`执行效果的总结，因为`setTimeout`、`setImmediate`的回调都是在之后的event loop周期中执行，`promise`、`process.nextTick()`的回调是可以在当前event loop周期中执行的。官方没有任何关于这个概念的提及，只能说这个概念可以帮助理解或记住这四种操作的执行方式，但是实际上并不是依据这个概念来实现操作的，故本文不是基于这个概念来展开说明，而是更贴合真实机制。
+关于网上常说的`宏任务`、`微任务`的概念，个人认为这个概念仅仅是对`promise`、`setTimeout`、`setImmediate`、`process.nextTick()`执行效果的总结，因为`setTimeout`、`setImmediate`的回调都是在之后的event loop周期中执行，`promise`、`process.nextTick()`的回调是可以在当前event loop周期中执行的。官方没有任何关于这个概念的提及，只能说这个概念可以帮助理解或记住这四种操作的执行方式，但是实际上并不是依据这个概念来实现操作的，故本文不是基于这个概念来展开说明，而是更贴合真实机制。
 
 大致原理了解了之后咱们来看几个小例子（其实难度并不小）
 
